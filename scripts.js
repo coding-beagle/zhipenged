@@ -11,8 +11,8 @@ function randomStartPosition(offset) {
     return { x: randomX, y: randomY };
 }
 
-// Set random starting position with an offset of 60 pixels from the edges
-const startPosition = randomStartPosition(60);
+// Set random starting position with an offset of 100 pixels horizontally and 80 pixels vertically from the edges
+const startPosition = randomStartPosition(100, 80);
 image.style.left = `${startPosition.x}px`;
 image.style.top = `${startPosition.y}px`;
 
@@ -48,3 +48,9 @@ function changeColor() {
 }
 
 moveImage();
+
+function randomStartPosition(offsetX, offsetY) {
+    const randomX = Math.random() * (window.innerWidth - 2 * offsetX) + offsetX;
+    const randomY = Math.random() * (window.innerHeight - 2 * offsetY) + offsetY;
+    return { x: randomX, y: randomY };
+}
