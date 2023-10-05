@@ -12,7 +12,7 @@ function randomStartPosition(offset) {
 }
 
 // Set random starting position with an offset of 100 pixels horizontally and 80 pixels vertically from the edges
-const startPosition = randomStartPosition(100, 80);
+const startPosition = randomStartPosition(300, 300);
 image.style.left = `${startPosition.x}px`;
 image.style.top = `${startPosition.y}px`;
 
